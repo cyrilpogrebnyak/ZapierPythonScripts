@@ -1,0 +1,24 @@
+import datetime
+
+# Get the current date
+today = datetime.date.today()
+
+# Get the day of the week for the current date (0 - Monday, 6 - Sunday)
+day_of_week = today.weekday()
+
+# Get the current month
+month = today.month
+
+# Get the current year
+year = today.year
+
+# Check if the current day is Wednesday (2) and if it is the third Wednesday of the month
+if day_of_week == 2 and 15 <= today.day <= 21:
+    # If it is the third Wednesday, set the output to True
+    output = True
+else:
+    # If it is not the third Wednesday, set the output to False
+    output = False
+
+# Create a list of dictionaries with the output value and a unique id
+output = [{"output": output, "id": 1}]
